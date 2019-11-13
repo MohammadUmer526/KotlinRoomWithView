@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 class WordViewModel(application: Application): AndroidViewModel(application)  {
 
+    //access data layer
     private val repository: WordRepository
 
     val allWords: LiveData<List<Word>>
@@ -20,7 +21,7 @@ class WordViewModel(application: Application): AndroidViewModel(application)  {
         repository = WordRepository(wordsDao)
         allWords = repository.allWords
     }
-
+    // update Livedata
     fun insert(word: Word) = viewModelScope.launch {
         repository.insert(word)
     }

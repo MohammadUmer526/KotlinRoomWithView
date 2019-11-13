@@ -13,6 +13,7 @@ import com.example.kotlinroom.R
 class NewWordActivity : AppCompatActivity() {
     private lateinit var editWordView: EditText
 
+    // add a new word to List
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_word)

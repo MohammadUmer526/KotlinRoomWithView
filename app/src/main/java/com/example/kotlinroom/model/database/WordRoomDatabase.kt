@@ -11,9 +11,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.Dispatchers
 
+
+// db for Words
 @Database(entities = arrayOf(Word::class), version = 1,exportSchema = false)
  abstract class WordRoomDatabase : RoomDatabase() {
-
      abstract fun wordDao(): WordDao
 
     companion object {
